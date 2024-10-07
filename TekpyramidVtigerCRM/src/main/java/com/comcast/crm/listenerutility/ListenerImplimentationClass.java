@@ -78,14 +78,4 @@ public class ListenerImplimentationClass implements ITestListener,ISuiteListener
 	public void onTestSkipped(ITestResult result) {
 		test.log(Status.SKIP,result.getMethod().getMethodName()+"===> SKIPPED <===");
 	}
-
-	@Override
-	public void onStart(ITestContext context) {
-		ITestListener.super.onStart(context);
-	}
-
-	@Override
-	public void onFinish(ITestContext context) {
-		ITestListener.super.onFinish(context);
-	}
 }
