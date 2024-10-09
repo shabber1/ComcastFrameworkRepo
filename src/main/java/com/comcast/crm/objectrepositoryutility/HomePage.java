@@ -19,6 +19,13 @@ public class HomePage {
 	@FindBy(xpath = "//td[@class='tabUnSelected']/a[.='Organizations']")
 	private WebElement orgLnk;
 	
+	@FindBy(xpath = "//a[.='Leads' and @href='index.php?module=Leads&action=index']")
+	private WebElement leadsLnk;
+	
+	public WebElement getLeadsLnk() {
+		return leadsLnk;
+	}
+
 	@FindBy(xpath = "//a[.='Contacts']")
 	private WebElement contactLnk;
 	
