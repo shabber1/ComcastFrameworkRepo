@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="2">
+
+	<groups>
+		<run>
+			<include name="regressionTest" />
+		</run>
+	</groups>
+
+	<listeners>
+		<listener
+			class-name="com.comcast.crm.listenergeneric.ListenerPraticeImpClass" />
+	</listeners>
+
+	<test name="TestRunner1">
+		<parameter name="BROWSER" value="chrome" />
+		<classes>
+			<class name="com.comcast.crm.orgtest.OrgModule" />
+
+		</classes>
+	</test> <!-- Test -->
+	<test name="TestRunner2">
+		<parameter name="BROWSER" value="firefox" />
+		<classes>
+
+			<class name="com.comcast.crm.contacttest.ContactModule" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
