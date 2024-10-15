@@ -15,11 +15,11 @@ public class LoginPage extends WebDriverUtility{
 		PageFactory.initElements(driver, this);
 	}
 	@FindBy(name="user_name")
-		WebElement usernameEdt;
+	private	WebElement usernameEdt;
 	@FindBy(name="user_password")
-		WebElement passwordEdt;
+	private	WebElement passwordEdt;
 	@FindBy(id="submitButton")
-		WebElement loginBtn;
+	private	WebElement loginBtn;
 
 	public WebElement getUsernameEdt() {
 		return usernameEdt;
