@@ -18,22 +18,22 @@ public class CreateOrganizationTest extends BaseClass{
 	@Test(groups="smokeTest")
 	public void createOrganizationTest() throws Throwable {
 		
-		UtilityClassObject.getTest().log(Status.INFO, "read data from excel");
+		//UtilityClassObject.getTest().log(Status.INFO, "read data from excel");
 
 		String orgname = elib.getDataFromExcel("org", 1, 2) + jlib.getRandomNumber();
 
-		UtilityClassObject.getTest().log(Status.INFO, "navigate to org page");
+		//UtilityClassObject.getTest().log(Status.INFO, "navigate to org page");
 		HomePage op = new HomePage(driver);
 		op.getOrglink().click();
 
-		UtilityClassObject.getTest().log(Status.INFO, "navigate to create org page");
+		//UtilityClassObject.getTest().log(Status.INFO, "navigate to create org page");
 		OrganizationsPage cnp = new OrganizationsPage(driver);
 		cnp.getCreateneworgbtn().click();
 
-		UtilityClassObject.getTest().log(Status.INFO, "create a new org page");
+		//UtilityClassObject.getTest().log(Status.INFO, "create a new org page");
 		CreatingNewOrganizationPage cnop = new CreatingNewOrganizationPage(driver);
 		cnop.createorg(orgname);
-		UtilityClassObject.getTest().log(Status.INFO, orgname+"created a new org page");
+		//UtilityClassObject.getTest().log(Status.INFO, orgname+"created a new org page");
 
 		OrganizationInfoPage oip = new OrganizationInfoPage(driver);
 		String actOrgName = oip.getHeadermsg().getText();
