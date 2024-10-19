@@ -79,7 +79,7 @@ public class BaseClass{
 		lp.logintoapp(url,username,password);
 	}
 	@AfterMethod(groups={"regressionTest","smokeTest"})
-	public void congigAM() {
+	public void congigAM() throws InterruptedException {
 		System.out.println("==logout==");
 		HomePage hp=new HomePage(driver);
 		hp.logout();

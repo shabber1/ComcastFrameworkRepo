@@ -52,9 +52,10 @@ public class HomePage {
 		act.moveToElement(morelink).perform();
 		campaignslink.click();
 	}
-	public void logout() {
+	public void logout() throws InterruptedException {
 		Actions act=new Actions(driver);
 		act.moveToElement(adminImg).perform();
+		Thread.sleep(2000);
 		signoutlink.click();
 	}
 }
